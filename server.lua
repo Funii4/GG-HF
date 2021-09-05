@@ -3,6 +3,7 @@ Citizen.CreateThread(
         explosionCounter = {}
         vehCounter = {}
         PedCounter = {}
+		
         PropCounter = {}
         while true do
             Citizen.Wait(1500)
@@ -679,17 +680,17 @@ AddEventHandler(
 )
 
 
---[[ BY NOTBAD HÁZELO TO ERROR PROTOŽE TEN FILE NEEXISTUJE?? ASI :D
+--[[ Licence system, enjoy
 AddEventHandler(
     "onResourceStart",
     function(resourceName)
         LicenseCheckedTrue = false
         if resourceName == GetCurrentResourceName() then
             PerformHttpRequest(
-                "http://82.208.17.160/45sdf4-sda4561c-sgjgs45-cdq4j.json",
+                "",
                 function(err, text, header)
                     local data = json.decode(text)
-                    local ServerData = {"45sdf4-sda4561c-sgjgs45-cdq4j"}
+                    local ServerData = {""}
                     local Auth = false
                     for k , v in pairs(data) do
                         for i, d in pairs(v) do 
